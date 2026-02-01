@@ -9,7 +9,7 @@ const redis = new Redis(process.env.REDIS_URL);
 
 const MAX_SIZE = 1000;
 const CLEANUP_COUNT = 5;
-const WEBHOOK_URL = "https://discord.com/api/webhooks/1466927407633269039/cMzT2OEUzZfTtyCnRopWnHqjSopcCpSRXCSJNK9XO9H0F-RNonTogzPtPF7nPa1EAbXV";
+const WEBHOOK_URL = process.env.DISCORD_WEBHOOK;
 
 // Lista especial de brainrots
 const specialBrainrots = {
