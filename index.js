@@ -5,6 +5,7 @@ const app = express();
 app.use(express.json());
 
 // Conexión a Redis (Railway te da la URL en REDIS_URL)
+const Redis = require("ioredis");
 const redis = new Redis(process.env.REDIS_URL);
 
 const MAX_SIZE = 1000;
