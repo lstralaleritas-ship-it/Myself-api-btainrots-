@@ -108,3 +108,6 @@ app.get("/servers/blacklist/:jobId", async (req, res) => {
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`API corriendo en puerto ${PORT}`));
+redis.ping()
+  .then(() => console.log('✅ Redis conectado correctamente'))
+  .catch(err => console.error('❌ Error al conectar con Redis:', err));
