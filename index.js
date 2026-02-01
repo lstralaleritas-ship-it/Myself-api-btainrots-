@@ -5,7 +5,7 @@ const app = express();
 app.use(express.json());
 
 // Conexión a Redis (Railway te da la URL en REDIS_URL)
-const redis = new Redis(process.env."redis://default:mhVNNfTHSwsHtRPzCOgeXgEXCFMGNmtD@redis.railway.internal:6379");
+const redis = new Redis(process.env.REDIS_URL);
 
 const MAX_SIZE = 1000;
 const CLEANUP_COUNT = 5;
